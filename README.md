@@ -1,6 +1,6 @@
 # indexify-dir-cli
 
-## Easy make index file with exports
+## Create index file with exports of files from directory
 
 Arguments:<br />
 fileExtension Extension of index file<br />

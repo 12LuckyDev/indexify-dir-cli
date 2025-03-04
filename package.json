@@ -13,7 +13,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "Easy make index file with exports",
+  "description": "Create index file with exports of files from directory",
   "devDependencies": {
     "@types/figlet": "^1.7.0",
     "@types/node": "^22.12.0",
