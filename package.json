@@ -1,0 +1,30 @@
+{
+  "name": "indexify-dir-cli",
+  "bin": {
+    "indexify-dir-cli": "./dist/bin.js"
+  },
+  "version": "0.0.0",
+  "main": "bin.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "tsc -w",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Easy make index file with exports",
+  "devDependencies": {
+    "@types/figlet": "^1.7.0",
+    "@types/node": "^22.12.0",
+    "prettier": "3.5.3",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@types/cli-progress": "^3.11.6",
+    "cli-progress": "^3.12.0",
+    "commander": "^13.1.0",
+    "figlet": "^1.8.0",
+    "picocolors": "^1.1.1"
+  }
+}
