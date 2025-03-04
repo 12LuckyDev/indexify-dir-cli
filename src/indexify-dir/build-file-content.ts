@@ -7,7 +7,6 @@ export const buildTextContent = (
   const quotes = doubleQuotation ? `"` : `'`;
   let indexContent = "";
 
-  console.log(files);
   files.forEach(
     (file: string | null) =>
       (indexContent +=
