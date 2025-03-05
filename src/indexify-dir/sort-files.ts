@@ -33,7 +33,7 @@ export const sortFiles = (
 
     sortedPaths.push(
       ...dirSubs
-        .toSorted((a, b) => b.length - a.length)
+        .sort((a, b) => b.length - a.length)
         .map((splited) => splited.join("/")),
     );
     if (addBreaks) {
