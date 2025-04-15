@@ -10,7 +10,7 @@ export const buildTextContent = (
   files.forEach(
     (file: string | null) =>
       (indexContent +=
-        file === null ? "\n" : `export * from ${quotes}.${file}${quotes}\n`),
+        file === null ? "\n" : `export * from ${quotes}.${file}${quotes};\n`),
   );
 
   return indexContent;
