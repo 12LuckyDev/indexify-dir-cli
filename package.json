@@ -3,7 +3,7 @@
   "bin": {
     "indexify-dir-cli": "./dist/bin.js"
   },
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "./dist/bin.js",
   "scripts": {
     "start": "npm run dev",
