@@ -8,6 +8,7 @@ export type IndexifyOptions =
       doubleQuotation: boolean;
       ignoreIndexes: boolean;
       verbose: boolean;
+      fileName: string;
     }
   | {
       addExtension: boolean;
@@ -19,4 +20,5 @@ export type IndexifyOptions =
       ignoreIndexes: boolean;
       verbose: boolean;
       extensions: string[];
+      fileName: string;
     };

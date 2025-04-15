@@ -12,7 +12,7 @@ export const indexifyAction = (
   options: IndexifyOptions,
 ): void => {
   const finalPath = getWorkingPath(workingPath);
-  const fileName = `index.${fileExtension}`;
+  const fileName = `${options.fileName}.${fileExtension}`;
 
   if (!checkPath(finalPath)) {
     console.error(pc.red("Directory no exist!"));

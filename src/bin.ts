@@ -10,6 +10,7 @@ configurateCommand(program);
 program
   .argument("<fileExtension>", "Extension of index file")
   .argument("[path]", "(Optional) Path to index file root directory", null)
+  .option("--fn --file-name <string>", "Output file name", "index")
   .option(
     "-n --no-add-extension",
     "If set exports will be written without extension",

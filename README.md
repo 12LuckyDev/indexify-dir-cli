@@ -8,6 +8,7 @@ path (Optional) Path to index file root directory (default: null)<br />
 
 Options:<br />
 -v --version Output the version number<br />
+--fn --file-name <string> Output file name (default: "index")<br />
 -n --no-add-extension If set exports will be written without extension<br />
 -f --flat Only include files direcly from target directory (default: false)<br />
 -a --all-extensions Include all files, no matter what extension they have (default: false)<br />
