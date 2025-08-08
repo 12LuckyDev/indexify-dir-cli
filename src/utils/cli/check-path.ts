@@ -1,10 +1,11 @@
-import fs from "fs";
+import fs from 'fs';
 
 export const checkPath = (path: string) => {
   try {
     fs.accessSync(path);
     return true;
-  } catch (_ex) {
+  } catch (ex) {
+    console.error(ex);
     return false;
   }
 };
