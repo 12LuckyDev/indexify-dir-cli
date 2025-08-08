@@ -1,14 +1,11 @@
-export const sortFiles = (
-  paths: string[],
-  addBreaks: boolean,
-): (string | null)[] => {
+export const sortFiles = (paths: string[], addBreaks: boolean): (string | null)[] => {
   const pathsMap = new Map<string, string[][]>();
 
   paths.forEach((path) => {
-    const splitedPath = path.split("/");
+    const splitedPath = path.split('/');
     // if length === 2 then path don't have any subfolders
     // else path has first folder at index 1 (index 0 is always empty string)
-    const firstDir = splitedPath.length > 2 ? (splitedPath[1] ?? "") : "";
+    const firstDir = splitedPath.length > 2 ? (splitedPath[1] ?? '') : '';
     const current = pathsMap.get(firstDir);
     if (current) {
       current.push(splitedPath);
@@ -20,9 +17,9 @@ export const sortFiles = (
   const sortedPaths: (string | null)[] = [];
 
   const mainDirs = [...pathsMap.keys()].sort();
-  if (mainDirs[0] === "") {
+  if (mainDirs[0] === '') {
     mainDirs.shift();
-    mainDirs.push("");
+    mainDirs.push('');
   }
 
   mainDirs.forEach((dir) => {
@@ -31,11 +28,7 @@ export const sortFiles = (
       return;
     }
 
-    sortedPaths.push(
-      ...dirSubs
-        .sort((a, b) => b.length - a.length)
-        .map((splited) => splited.join("/")),
-    );
+    sortedPaths.push(...dirSubs.sort((a, b) => b.length - a.length).map((splited) => splited.join('/')));
     if (addBreaks) {
       sortedPaths.push(null);
     }

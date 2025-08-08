@@ -1,16 +1,11 @@
-import { IndexifyOptions } from "../models";
+import { IndexifyOptions } from '../models';
 
-export const buildTextContent = (
-  files: (string | null)[],
-  { doubleQuotation }: IndexifyOptions,
-): string => {
+export const buildTextContent = (files: (string | null)[], { doubleQuotation }: IndexifyOptions): string => {
   const quotes = doubleQuotation ? `"` : `'`;
-  let indexContent = "";
+  let indexContent = '';
 
   files.forEach(
-    (file: string | null) =>
-      (indexContent +=
-        file === null ? "\n" : `export * from ${quotes}.${file}${quotes};\n`),
+    (file: string | null) => (indexContent += file === null ? '\n' : `export * from ${quotes}.${file}${quotes};\n`),
   );
 
   return indexContent;

@@ -1,7 +1,7 @@
-import { Command } from "commander";
-import { getConfig } from "./get-config";
-import figlet from "figlet";
-import pc from "picocolors";
+import { Command } from 'commander';
+import { getConfig } from './get-config';
+import figlet from 'figlet';
+import pc from 'picocolors';
 
 export const configurateCommand = (command: Command): void => {
   const config = getConfig();
@@ -15,11 +15,11 @@ export const configurateCommand = (command: Command): void => {
     command.name(name);
   }
   if (version) {
-    command.version(version, "-v --version", "Output the version number");
+    command.version(version, '-v --version', 'Output the version number');
   }
   if (description) {
     const descriptionText = name
-      ? `${pc.cyan(figlet.textSync(name, { horizontalLayout: "full" }))}\n\n${pc.gray(description)}`
+      ? `${pc.cyan(figlet.textSync(name, { horizontalLayout: 'full' }))}\n\n${pc.gray(description)}`
       : description;
 
     command.description(descriptionText);

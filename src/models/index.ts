@@ -1,3 +1,3 @@
-export * from "./cli/config.model";
+export * from './cli/config.model';
 
-export * from "./indexify/indexify-options.type";
+export * from './indexify/indexify-options.type';
